@@ -1,4 +1,8 @@
-# DevOps Capstone Template
+# devops-capstone-project
+
+## Customer Accounts Microservice – DevOps Capstone Project
+
+This project is part of the IBM DevOps Capstone. It focuses on developing a Python Flask-based REST API for managing customer accounts in an e-commerce application. The microservice supports creating, reading, updating, deleting, and listing customer accounts while following DevOps practices and Test Driven Development (TDD).
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.9](https://img.shields.io/badge/Python-3.9-green.svg)](https://shields.io/)
@@ -9,7 +13,7 @@ This repository contains the starter code for the project in [**IBM-CD0285EN-Ski
 
 You should use this template to start your DevOps Capstone project. It contains all of the code that you will need to get started.
 
-Do Not fork this code! It is meant to be used by pressing the  <span style=color:white;background:green>**Use this Template**</span> button in GitHub. This will copy the code to your own repository with no connection back to the original repository like a fork would. This is what you want.
+Do Not fork this code! It is meant to be used by pressing the **Use this Template** button in GitHub. This will copy the code to your own repository with no connection back to the original repository like a fork would. This is what you want.
 
 ## Development Environment
 
@@ -65,10 +69,10 @@ The code for the microservice is contained in the `service` package. All of the 
 
 ```text
 ├── service         <- microservice package
-│   ├── common/     <- common log and error handlers
-│   ├── config.py   <- Flask configuration object
-│   ├── models.py   <- code for the persistent model
-│   └── routes.py   <- code for the REST API routes
+│   ├── common/     <- common log and error handlers
+│   ├── config.py   <- Flask configuration object
+│   ├── models.py   <- code for the persistent model
+│   └── routes.py   <- code for the REST API routes
 ├── setup.cfg       <- tools setup config
 └── tests                       <- folder for all of the tests
     ├── factories.py            <- test factories
@@ -83,7 +87,7 @@ The Account model contains the following fields:
 
 | Name | Type | Optional |
 |------|------|----------|
-| id | Integer| False |
+| id | Integer | False |
 | name | String(64) | False |
 | email | String(64) | False |
 | address | String(256) | False |
@@ -92,33 +96,33 @@ The Account model contains the following fields:
 
 ## Your Task
 
-Complete this microservice by implementing REST API's for `READ`, `UPDATE`, `DELETE`, and `LIST` while maintaining **95%** code coverage. In true **Test Driven Development** fashion, first write tests for the code you "wish you had", and then write the code to make them pass.
+Complete this microservice by implementing REST APIs for `READ`, `UPDATE`, `DELETE`, and `LIST` while maintaining **95%** code coverage. In true **Test Driven Development** fashion, first write tests for the code you "wish you had", and then write the code to make them pass.
 
 ## Local Kubernetes Development
 
-This repo can also be used for local Kubernetes development. It is not advised that you run these commands in the Cloud IDE environment. The purpose of these commands are to simulate the Cloud IDE environment locally on your computer. 
+This repo can also be used for local Kubernetes development. It is not advised that you run these commands in the Cloud IDE environment. The purpose of these commands is to simulate the Cloud IDE environment locally on your computer.
 
-At a minimum, you will need [Docker Desktop](https://www.docker.com/products/docker-desktop) installed on your computer. For the full development environment, you will also need [Visual Studio Code](https://code.visualstudio.com) with the [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension from the Visual Studio Marketplace. All of these can be installed manually by clicking on the links above or you can use a package manager like **Homebrew** on Mac of **Chocolatey** on Windows.
+At a minimum, you will need [Docker Desktop](https://www.docker.com/products/docker-desktop) installed on your computer. For the full development environment, you will also need [Visual Studio Code](https://code.visualstudio.com/) with the [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension from the Visual Studio Marketplace. All of these can be installed manually by clicking on the links above or you can use a package manager like **Homebrew** on Mac or **Chocolatey** on Windows.
 
 Please only use these commands for working stand-alone on your own computer with the VSCode Remote Container environment provided.
 
 1. Bring up a local K3D Kubernetes cluster
 
-    ```bash
-    $ make cluster
-    ```
+   ```bash
+   make cluster
+   ```
 
 2. Install Tekton
 
-    ```bash
-    $ make tekton
-    ```
+   ```bash
+   make tekton
+   ```
 
 3. Install the ClusterTasks that the Cloud IDE has
 
-    ```bash
-    $ make clustertasks
-    ```
+   ```bash
+   make clustertasks
+   ```
 
 You can now perform Tekton development locally, just like in the Cloud IDE lab environment.
 
